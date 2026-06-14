@@ -1,0 +1,39 @@
+name: Daily Weather Log
+
+on:
+  schedule:
+    - cron: '0 12 * * *'   # noon UTC daily (8am ET)
+  workflow_dispatch:         # manual trigger from Actions tab
+
+jobs:
+  log:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write        # needed to push the CSV commit
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install requests
+
+      - name: Fetch and append weather data
+        env:
+          LOC1_LAT: '34.5400'
+          LOC1_LON: '-112.4685'
+          LOC1_NAME: 'Prescott, AZ'
+          LOC2_LAT: '29.2108'
+          LOC2_LON: '-81.0228'
+          LOC2_NAME: 'Daytona Beach, FL'
+        run: python scripts/log_weather.py
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/weather_log.csv
+          git diff --staged --quiet || git commit -m "data: daily weather log $(date -u +%Y-%m-%d)"
+          git push
