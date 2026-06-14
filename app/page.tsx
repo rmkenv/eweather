@@ -19,8 +19,8 @@ const LocationMap = dynamic(() => import('@/components/LocationMap'), {
   ),
 });
 
-const DEFAULT_LOC1: Coordinates = { lat: 39.2904, lon: -76.6122, name: 'Baltimore, Maryland, US' };
-const DEFAULT_LOC2: Coordinates = { lat: 30.2672, lon: -97.7431, name: 'Austin, Texas, US' };
+const DEFAULT_LOC1: Coordinates = { lat: 34.5400, lon: -112.4685, name: 'Prescott, Arizona, US' };
+const DEFAULT_LOC2: Coordinates = { lat: 29.2108, lon: -81.0228, name: 'Daytona Beach, Florida, US' };
 
 interface DashboardData {
   weather: WeatherData | null;
