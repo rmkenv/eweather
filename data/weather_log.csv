@@ -1,3 +1,5 @@
 timestamp_utc,date,location,lat,lon,temp_f,apparent_temp_f,dew_point_f,humidity_pct,precip_today_in,wind_mph,wind_gusts_mph,wind_dir_deg,pressure_hpa,cloud_cover_pct,ghi_wm2,et0_mm_hr,weather_code,temp_max_f,temp_min_f,precip_total_in,et0_daily_mm,ghi_daily_kwh,wind_max_mph,snowfall_cm
 2026-06-15T17:08:05Z,2026-06-15,"Prescott, AZ",34.5400,-112.4685,83.1,82.9,49.5,31,0.0,7.0,11.4,230,843.4,0,840.0,0.0,0,88.0,66.4,0.177,6.48,6.23,20.9,0.0
 2026-06-15T17:08:06Z,2026-06-15,"Daytona Beach, FL",29.2108,-81.0228,91.9,99.3,72.5,53,0.0,10.8,15.4,248,1014.1,24,830.0,0.0,1,94.5,75.6,0.016,5.18,6.14,12.7,0.0
+2026-06-16T16:41:14Z,2026-06-16,"Prescott, AZ",34.5400,-112.4685,83.5,81.5,46.0,27,0.0,7.3,9.4,12,841.4,4,760.0,0.0,0,91.4,66.0,0.0,8.51,8.06,23.6,0.0
+2026-06-16T16:41:15Z,2026-06-16,"Daytona Beach, FL",29.2108,-81.0228,86.2,98.1,75.7,71,0.0,8.1,12.8,251,1013.6,45,950.0,0.0,95,87.6,75.0,1.236,4.2,6.09,18.5,0.0
